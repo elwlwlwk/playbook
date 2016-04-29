@@ -3,4 +3,4 @@
   sudo: yes
   tasks:
   - name: 1. Install htop
-    apt: name=htop state=present
+    apt: name={{item}} state=present
