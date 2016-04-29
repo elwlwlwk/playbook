@@ -1,5 +1,5 @@
 - name: Install tmux
-  hosts: gooroom
+  hosts: 192.168.0.2
   sudo: yes
   tasks:
   - name: 1. Install htop
