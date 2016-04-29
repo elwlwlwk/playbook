@@ -1,0 +1,6 @@
+- name: Install tmux
+ hosts: gooroom
+ sudo: yes
+ tasks:
+ - name: 1. Install tmux
+  apt: name=tmux state=present
