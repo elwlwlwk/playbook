@@ -1,6 +1,6 @@
 - name: Remove "{{ item }}"
   hosts: "{{ group }}"
-  sudo: yes
+  remote_user: gooroom
   tasks:
   - name: 1. Remove "{{ item }}"
     apt: name="{{ item }}" state=absent autoremove=yes
