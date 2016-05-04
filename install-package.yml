@@ -3,4 +3,6 @@
   remote_user: gooroom
   tasks:
   - name: 1. Install "{{ item }}"
+    become: yes
+    become_method: sudo
     apt: name="{{ item }}" state=present update_cache=yes
