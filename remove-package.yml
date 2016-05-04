@@ -5,4 +5,4 @@
   - name: 1. Remove "{{ item }}"
     become: yes
     become_method: sudo
-    apt: name="{{ item }}" state=absent autoremove=yes
+    apt: name="{{ item }}" state=absent
