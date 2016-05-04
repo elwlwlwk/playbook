@@ -1,6 +1,6 @@
 - name: Install "{{ item }}"
   hosts: "{{ group }}"
-  remote_user: root
+  remote_user: gooroom
   tasks:
   - name: 1. Install "{{ item }}"
     apt: name="{{ item }}" state=present update_cache=yes
