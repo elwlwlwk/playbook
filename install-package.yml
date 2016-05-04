@@ -3,7 +3,4 @@
   sudo: yes
   tasks:
   - name: 1. Install "{{ item }}"
-    apt: name="{{ item }}" state=present
-
-  - name: 2. Upgrade
-    apt: upgrade=safe 
+    apt: name="{{ item }}" state=present update_cache=yes
