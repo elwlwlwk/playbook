@@ -1,0 +1,11 @@
+- name: List
+  hosts: "{{ group }}"
+  remote_user: gooroom
+  tasks:
+  - name: 1. Security Updatable
+    become: yes
+    become_method: sudo
+    script: /srv/security.sh
+    register: out
+
+  - debug: var=out.stdout_lines
