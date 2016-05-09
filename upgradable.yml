@@ -1,0 +1,11 @@
+- name: List
+  hosts: "{{ group }}"
+  remote_user: gooroom
+  tasks:
+  - name: 1. List
+    become: yes
+    become_method: sudo
+    apt_ext: state=upgradable
+    register: out
+
+  - debug: var=out.stdout_lines
