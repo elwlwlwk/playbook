@@ -2,10 +2,10 @@
   hosts: "{{ group }}"
   remote_user: gooroom
   tasks:
-  - name: 1. List
+  - name: 1. Upgradable
     become: yes
     become_method: sudo
-    apt_ext: state=upgradable
+    command: apt-get update -s | grep -v Conf
     register: out
 
   - debug: var=out.stdout_lines

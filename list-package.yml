@@ -5,7 +5,7 @@
   - name: 1. List
     become: yes
     become_method: sudo
-    apt_ext: state=list
+    command: dpkg -l
     register: out
 
   - debug: var=out.stdout_lines
