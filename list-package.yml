@@ -8,4 +8,4 @@
     apt_ext: state=list
     register: out
 
-  - debug: var=out.std_lines
+  - debug: var=out.stdout_lines
