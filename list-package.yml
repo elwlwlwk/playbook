@@ -6,3 +6,6 @@
     become: yes
     become_method: sudo
     apt_ext: state=list
+    register: out
+
+  - debug: var=out.std_lines
